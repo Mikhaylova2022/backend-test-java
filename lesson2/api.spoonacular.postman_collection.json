@@ -1,0 +1,1691 @@
+{
+	"info": {
+		"_postman_id": "dd7b1b31-eace-47dc-a1e1-4754211c711a",
+		"name": "api.spoonacular",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.variables.get(\"variable_key\");\r",
+							"pm.sendRequest(\"https://postman-echo.com/get\", function (err, response) {\r",
+							"    console.log(response.json());\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "in",
+							"value": "query",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "APIKey",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "12fa2f47c2374b3b938768168d07a5ca",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://spoonacular.com/food-api/docs#Authentication",
+					"protocol": "https",
+					"host": [
+						"spoonacular",
+						"com"
+					],
+					"path": [
+						"food-api",
+						"docs"
+					],
+					"hash": "Authentication"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 1000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							"var jsonObject = xml2Json(responseBody);\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "in",
+							"value": "query",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "APIKey",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "12fa2f47c2374b3b938768168d07a5ca",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://spoonacular.com/food-api/docs?Cuisine=greek&excludeIngredients=eggs#Search-Recipes-Complex?excludeCuisine=greek",
+					"protocol": "https",
+					"host": [
+						"spoonacular",
+						"com"
+					],
+					"path": [
+						"food-api",
+						"docs"
+					],
+					"query": [
+						{
+							"key": "Cuisine",
+							"value": "greek"
+						},
+						{
+							"key": "excludeIngredients",
+							"value": "eggs"
+						}
+					],
+					"hash": "Search-Recipes-Complex?excludeCuisine=greek"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "in",
+							"value": "query",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "APIKey",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "12fa2f47c2374b3b938768168d07a5ca",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://spoonacular.com/food-api/docs?cuisine=italian&maxFat=100#Search-Recipes-Complex?cuisine=italian",
+					"protocol": "https",
+					"host": [
+						"spoonacular",
+						"com"
+					],
+					"path": [
+						"food-api",
+						"docs"
+					],
+					"query": [
+						{
+							"key": "cuisine",
+							"value": "italian"
+						},
+						{
+							"key": "maxFat",
+							"value": "100"
+						}
+					],
+					"hash": "Search-Recipes-Complex?cuisine=italian"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.variables.get(\"variable_key\");\r",
+							"pm.collectionVariables.get(\"variable_key\");\r",
+							"pm.test(\"Status code name has string\", function () {\r",
+							"    pm.response.to.have.status(\"Created\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "in",
+							"value": "query",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "APIKey",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "12fa2f47c2374b3b938768168d07a5ca",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://spoonacular.com/food-api/docs?maxFat=100&excludeIngredients=eggs#Search-Recipes-Complex?diet=vegetarian",
+					"protocol": "https",
+					"host": [
+						"spoonacular",
+						"com"
+					],
+					"path": [
+						"food-api",
+						"docs"
+					],
+					"query": [
+						{
+							"key": "maxFat",
+							"value": "100"
+						},
+						{
+							"key": "excludeIngredients",
+							"value": "eggs"
+						}
+					],
+					"hash": "Search-Recipes-Complex?diet=vegetarian"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.variables.get(\"variable_key\");\r",
+							"pm.collectionVariables.get(\"variable_key\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://spoonacular.com/food-api/docs?intolerances=gluten#Search-Recipes-Complex?intolerances=gluten",
+					"protocol": "https",
+					"host": [
+						"spoonacular",
+						"com"
+					],
+					"path": [
+						"food-api",
+						"docs"
+					],
+					"query": [
+						{
+							"key": "intolerances",
+							"value": "gluten"
+						}
+					],
+					"hash": "Search-Recipes-Complex?intolerances=gluten"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 1000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://spoonacular.com/food-api/docs?equipment=\tpan&type=main course#Search-Recipes-Complex",
+					"protocol": "https",
+					"host": [
+						"spoonacular",
+						"com"
+					],
+					"path": [
+						"food-api",
+						"docs"
+					],
+					"query": [
+						{
+							"key": "equipment",
+							"value": "\tpan"
+						},
+						{
+							"key": "type",
+							"value": "main course"
+						}
+					],
+					"hash": "Search-Recipes-Complex"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://spoonacular.com/food-api/docs?includeIngredients=tomato,cheese&type=main course#Search-Recipes-Complex?includeIngredients=tomato,cheese",
+					"protocol": "https",
+					"host": [
+						"spoonacular",
+						"com"
+					],
+					"path": [
+						"food-api",
+						"docs"
+					],
+					"query": [
+						{
+							"key": "includeIngredients",
+							"value": "tomato,cheese"
+						},
+						{
+							"key": "type",
+							"value": "main course"
+						}
+					],
+					"hash": "Search-Recipes-Complex?includeIngredients=tomato,cheese"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "8",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://spoonacular.com/food-api/docs?fillIngredients=false&addRecipeNutrition=false&instructionsRequired=true#Search-Recipes-Complex",
+					"protocol": "https",
+					"host": [
+						"spoonacular",
+						"com"
+					],
+					"path": [
+						"food-api",
+						"docs"
+					],
+					"query": [
+						{
+							"key": "fillIngredients",
+							"value": "false"
+						},
+						{
+							"key": "addRecipeNutrition",
+							"value": "false"
+						},
+						{
+							"key": "instructionsRequired",
+							"value": "true"
+						}
+					],
+					"hash": "Search-Recipes-Complex"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "9",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://spoonacular.com/food-api/docs?author=coffeebean&recipeBoxId=2468#Search-Recipes-Complex?",
+					"protocol": "https",
+					"host": [
+						"spoonacular",
+						"com"
+					],
+					"path": [
+						"food-api",
+						"docs"
+					],
+					"query": [
+						{
+							"key": "author",
+							"value": "coffeebean"
+						},
+						{
+							"key": "recipeBoxId",
+							"value": "2468"
+						}
+					],
+					"hash": "Search-Recipes-Complex?"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "10",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://spoonacular.com/food-api/docs?titleMatch=Crock Pot&maxReadyTime=20&ignorePantry=true#Search-Recipes-Complex",
+					"protocol": "https",
+					"host": [
+						"spoonacular",
+						"com"
+					],
+					"path": [
+						"food-api",
+						"docs"
+					],
+					"query": [
+						{
+							"key": "titleMatch",
+							"value": "Crock Pot"
+						},
+						{
+							"key": "maxReadyTime",
+							"value": "20"
+						},
+						{
+							"key": "ignorePantry",
+							"value": "true"
+						}
+					],
+					"hash": "Search-Recipes-Complex"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "11",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://spoonacular.com/food-api/docs?sort=calories&minCarbs=10&minProtein=10#Search-Recipes-Complex",
+					"protocol": "https",
+					"host": [
+						"spoonacular",
+						"com"
+					],
+					"path": [
+						"food-api",
+						"docs"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "calories"
+						},
+						{
+							"key": "minCarbs",
+							"value": "10"
+						},
+						{
+							"key": "minProtein",
+							"value": "10"
+						}
+					],
+					"hash": "Search-Recipes-Complex"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "12",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});\r",
+							"pm.variables.get(\"variable_key\");\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://spoonacular.com/food-api/docs?maxCarbs=100&maxProtein=100&minFat=1#Search-Recipes-Complex",
+					"protocol": "https",
+					"host": [
+						"spoonacular",
+						"com"
+					],
+					"path": [
+						"food-api",
+						"docs"
+					],
+					"query": [
+						{
+							"key": "maxCarbs",
+							"value": "100"
+						},
+						{
+							"key": "maxProtein",
+							"value": "100"
+						},
+						{
+							"key": "minFat",
+							"value": "1"
+						}
+					],
+					"hash": "Search-Recipes-Complex"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "13",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 700ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://spoonacular.com/food-api/docs?maxFat=100&maxAlcohol=100#Search-Recipes-Complex?maxFat=100&maxAlcohol=100",
+					"protocol": "https",
+					"host": [
+						"spoonacular",
+						"com"
+					],
+					"path": [
+						"food-api",
+						"docs"
+					],
+					"query": [
+						{
+							"key": "maxFat",
+							"value": "100"
+						},
+						{
+							"key": "maxAlcohol",
+							"value": "100"
+						}
+					],
+					"hash": "Search-Recipes-Complex?maxFat=100&maxAlcohol=100"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "14",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 700ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://spoonacular.com/food-api/docs?minCaffeine=0&minCopper=0&excludeCuisine\t=greek#Search-Recipes-Complex",
+					"protocol": "https",
+					"host": [
+						"spoonacular",
+						"com"
+					],
+					"path": [
+						"food-api",
+						"docs"
+					],
+					"query": [
+						{
+							"key": "minCaffeine",
+							"value": "0"
+						},
+						{
+							"key": "minCopper",
+							"value": "0"
+						},
+						{
+							"key": "excludeCuisine\t",
+							"value": "greek"
+						}
+					],
+					"hash": "Search-Recipes-Complex"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "15",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 700ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://spoonacular.com/food-api/docs?excludeIngredients=eggs&minSaturatedFat=0&minVitaminA=0#Search-Recipes-Complex",
+					"protocol": "https",
+					"host": [
+						"spoonacular",
+						"com"
+					],
+					"path": [
+						"food-api",
+						"docs"
+					],
+					"query": [
+						{
+							"key": "excludeIngredients",
+							"value": "eggs"
+						},
+						{
+							"key": "minSaturatedFat",
+							"value": "0"
+						},
+						{
+							"key": "minVitaminA",
+							"value": "0"
+						}
+					],
+					"hash": "Search-Recipes-Complex"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "16",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 700ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://spoonacular.com/food-api/docs?maxVitaminC=100&maxVitaminD=100&author=coffeebean#Search-Recipes-Complex",
+					"protocol": "https",
+					"host": [
+						"spoonacular",
+						"com"
+					],
+					"path": [
+						"food-api",
+						"docs"
+					],
+					"query": [
+						{
+							"key": "maxVitaminC",
+							"value": "100"
+						},
+						{
+							"key": "maxVitaminD",
+							"value": "100"
+						},
+						{
+							"key": "author",
+							"value": "coffeebean"
+						}
+					],
+					"hash": "Search-Recipes-Complex"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "17",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 700ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://spoonacular.com/food-api/docs?maxFluoride=100&maxVitaminD=100&recipeBoxId=2465#Search-Recipes-Complex",
+					"protocol": "https",
+					"host": [
+						"spoonacular",
+						"com"
+					],
+					"path": [
+						"food-api",
+						"docs"
+					],
+					"query": [
+						{
+							"key": "maxFluoride",
+							"value": "100"
+						},
+						{
+							"key": "maxVitaminD",
+							"value": "100"
+						},
+						{
+							"key": "recipeBoxId",
+							"value": "2465"
+						}
+					],
+					"hash": "Search-Recipes-Complex"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "18",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 700ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://spoonacular.com/food-api/docs?maxReadyTime=20&excludeIngredients=eggs#Search-Recipes-Complex",
+					"protocol": "https",
+					"host": [
+						"spoonacular",
+						"com"
+					],
+					"path": [
+						"food-api",
+						"docs"
+					],
+					"query": [
+						{
+							"key": "maxReadyTime",
+							"value": "20"
+						},
+						{
+							"key": "excludeIngredients",
+							"value": "eggs"
+						}
+					],
+					"hash": "Search-Recipes-Complex"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "19",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 700ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://spoonacular.com/food-api/docs?instructionsRequired=true&minCarbs=10#Search-Recipes-Complex",
+					"protocol": "https",
+					"host": [
+						"spoonacular",
+						"com"
+					],
+					"path": [
+						"food-api",
+						"docs"
+					],
+					"query": [
+						{
+							"key": "instructionsRequired",
+							"value": "true"
+						},
+						{
+							"key": "minCarbs",
+							"value": "10"
+						}
+					],
+					"hash": "Search-Recipes-Complex"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "20",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 700ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://spoonacular.com/food-api/docs?sortDirection=asc&addRecipeInformation\t=false#Search-Recipes-Complex",
+					"protocol": "https",
+					"host": [
+						"spoonacular",
+						"com"
+					],
+					"path": [
+						"food-api",
+						"docs"
+					],
+					"query": [
+						{
+							"key": "sortDirection",
+							"value": "asc"
+						},
+						{
+							"key": "addRecipeInformation\t",
+							"value": "false"
+						}
+					],
+					"hash": "Search-Recipes-Complex"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "Pork roast with green beans",
+							"type": "default"
+						},
+						{
+							"key": "ingredientList",
+							"value": "3 oz pork shoulder",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://spoonacular.com/food-api/docs?language=en#Classify-Cuisine?language=\ten",
+					"protocol": "https",
+					"host": [
+						"spoonacular",
+						"com"
+					],
+					"path": [
+						"food-api",
+						"docs"
+					],
+					"query": [
+						{
+							"key": "language",
+							"value": "en"
+						}
+					],
+					"hash": "Classify-Cuisine?language=\ten"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response time is less than 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "omelet",
+							"type": "default"
+						},
+						{
+							"key": "ingredientList",
+							"value": "5 eggs",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://spoonacular.com/food-api/docs?language=en#Classify-Cuisine?language=\ten",
+					"protocol": "https",
+					"host": [
+						"spoonacular",
+						"com"
+					],
+					"path": [
+						"food-api",
+						"docs"
+					],
+					"query": [
+						{
+							"key": "language",
+							"value": "en"
+						}
+					],
+					"hash": "Classify-Cuisine?language=\ten"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response time is less than 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "Ahold Lasagna with Meat Sauce\n",
+							"type": "default"
+						},
+						{
+							"key": "ingredientList",
+							"value": "strawberry",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://spoonacular.com/food-api/docs?language=en#Classify-Cuisine?language=\ten",
+					"protocol": "https",
+					"host": [
+						"spoonacular",
+						"com"
+					],
+					"path": [
+						"food-api",
+						"docs"
+					],
+					"query": [
+						{
+							"key": "language",
+							"value": "en"
+						}
+					],
+					"hash": "Classify-Cuisine?language=\ten"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "milk soup",
+							"type": "default"
+						},
+						{
+							"key": "ingredientList",
+							"value": "milk",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://spoonacular.com/food-api/docs?language=en#Classify-Cuisine?language=\ten",
+					"protocol": "https",
+					"host": [
+						"spoonacular",
+						"com"
+					],
+					"path": [
+						"food-api",
+						"docs"
+					],
+					"query": [
+						{
+							"key": "language",
+							"value": "en"
+						}
+					],
+					"hash": "Classify-Cuisine?language=\ten"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response time is less than 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "soup with meatballs",
+							"type": "default"
+						},
+						{
+							"key": "ingredientList",
+							"value": "minced meat",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://spoonacular.com/food-api/docs?language=en#Classify-Cuisine?language=\ten",
+					"protocol": "https",
+					"host": [
+						"spoonacular",
+						"com"
+					],
+					"path": [
+						"food-api",
+						"docs"
+					],
+					"query": [
+						{
+							"key": "language",
+							"value": "en"
+						}
+					],
+					"hash": "Classify-Cuisine?language=\ten"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response time is less than 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "mashed soup with mushrooms",
+							"type": "default"
+						},
+						{
+							"key": "ingredientList",
+							"value": "mushrooms",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://spoonacular.com/food-api/docs?language=en#Classify-Cuisine?language=\ten",
+					"protocol": "https",
+					"host": [
+						"spoonacular",
+						"com"
+					],
+					"path": [
+						"food-api",
+						"docs"
+					],
+					"query": [
+						{
+							"key": "language",
+							"value": "en"
+						}
+					],
+					"hash": "Classify-Cuisine?language=\ten"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response time is less than 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "shrimp in batter",
+							"type": "default"
+						},
+						{
+							"key": "ingredientList",
+							"value": "butter",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://spoonacular.com/food-api/docs?language=en#Classify-Cuisine?language=\ten",
+					"protocol": "https",
+					"host": [
+						"spoonacular",
+						"com"
+					],
+					"path": [
+						"food-api",
+						"docs"
+					],
+					"query": [
+						{
+							"key": "language",
+							"value": "en"
+						}
+					],
+					"hash": "Classify-Cuisine?language=\ten"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "8",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response time is less than 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "stewed potatoes with chicken",
+							"type": "default"
+						},
+						{
+							"key": "ingredientList",
+							"value": "chiken",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://spoonacular.com/food-api/docs?language=en#Classify-Cuisine?language=\ten",
+					"protocol": "https",
+					"host": [
+						"spoonacular",
+						"com"
+					],
+					"path": [
+						"food-api",
+						"docs"
+					],
+					"query": [
+						{
+							"key": "language",
+							"value": "en"
+						}
+					],
+					"hash": "Classify-Cuisine?language=\ten"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "9",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response time is less than 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "pasta with seafood\n",
+							"type": "default"
+						},
+						{
+							"key": "ingredientList",
+							"value": "shrimp",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://spoonacular.com/food-api/docs?language=en#Classify-Cuisine?language=\ten",
+					"protocol": "https",
+					"host": [
+						"spoonacular",
+						"com"
+					],
+					"path": [
+						"food-api",
+						"docs"
+					],
+					"query": [
+						{
+							"key": "language",
+							"value": "en"
+						}
+					],
+					"hash": "Classify-Cuisine?language=\ten"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "10",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "lyulya-beef kebab",
+							"type": "default"
+						},
+						{
+							"key": "ingredientList",
+							"value": "beef",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://spoonacular.com/food-api/docs?language=en#Classify-Cuisine?language=\ten",
+					"protocol": "https",
+					"host": [
+						"spoonacular",
+						"com"
+					],
+					"path": [
+						"food-api",
+						"docs"
+					],
+					"query": [
+						{
+							"key": "language",
+							"value": "en"
+						}
+					],
+					"hash": "Classify-Cuisine?language=\ten"
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "in",
+				"value": "query",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "12fa2f47c2374b3b938768168d07a5ca",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "APIKey",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Status code is 200\", function () {",
+					"    pm.response.to.have.status(200);",
+					"});"
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "variable_key",
+			"value": ""
+		}
+	]
+}

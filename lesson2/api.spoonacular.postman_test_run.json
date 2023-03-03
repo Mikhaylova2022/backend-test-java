@@ -1,0 +1,1194 @@
+{
+	"id": "1d4d16e1-9c10-4634-afc1-52441709215b",
+	"name": "api.spoonacular",
+	"timestamp": "2023-02-28T16:39:03.387Z",
+	"collection_id": "0-dd7b1b31-eace-47dc-a1e1-4754211c711a",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 89,
+	"totalFail": 2,
+	"results": [
+		{
+			"id": "0bd2928f-ed5d-47d0-9f40-c575174d0e8e",
+			"name": "1",
+			"url": "https://spoonacular.com/food-api/docs?APIKey=12fa2f47c2374b3b938768168d07a5ca#Authentication",
+			"time": 162,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				162
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "e1ccacd9-9e81-4ea2-9942-6f43f0029dd0",
+			"name": "2",
+			"url": "https://spoonacular.com/food-api/docs?Cuisine=greek&excludeIngredients=eggs&APIKey=12fa2f47c2374b3b938768168d07a5ca#Search-Recipes-Complex?excludeCuisine=greek",
+			"time": 167,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 1000ms": true,
+				"Content-Type is present": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1000ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				167
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 1000ms": true,
+					"Content-Type is present": true
+				}
+			]
+		},
+		{
+			"id": "1ac3ed95-ea73-4784-a4c2-47077d5d9518",
+			"name": "3",
+			"url": "https://spoonacular.com/food-api/docs?cuisine=italian&maxFat=100&APIKey=12fa2f47c2374b3b938768168d07a5ca#Search-Recipes-Complex?cuisine=italian",
+			"time": 166,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				166
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				}
+			]
+		},
+		{
+			"id": "03d2546b-d080-44e8-a9d9-4ed410ee7dfa",
+			"name": "4",
+			"url": "https://spoonacular.com/food-api/docs?maxFat=100&excludeIngredients=eggs&APIKey=12fa2f47c2374b3b938768168d07a5ca#Search-Recipes-Complex?diet=vegetarian",
+			"time": 203,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Status code name has string": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code name has string": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				203
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Status code name has string": false
+				}
+			]
+		},
+		{
+			"id": "1811c338-26cc-42d7-8b53-6022a418f45d",
+			"name": "5",
+			"url": "https://spoonacular.com/food-api/docs?intolerances=gluten&APIKey=12fa2f47c2374b3b938768168d07a5ca#Search-Recipes-Complex?intolerances=gluten",
+			"time": 148,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				148
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "3f256023-e6dc-4a15-9275-bbd0ef7c42c4",
+			"name": "6",
+			"url": "https://spoonacular.com/food-api/docs?equipment=%09pan&type=main%20course&APIKey=12fa2f47c2374b3b938768168d07a5ca#Search-Recipes-Complex",
+			"time": 161,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				161
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "9905d71d-6def-47fa-a704-86d1b64fc769",
+			"name": "7",
+			"url": "https://spoonacular.com/food-api/docs?includeIngredients=tomato,cheese&type=main%20course&APIKey=12fa2f47c2374b3b938768168d07a5ca#Search-Recipes-Complex?includeIngredients=tomato,cheese",
+			"time": 173,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				173
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "2ed70875-6769-4134-acb1-80b7a9dde766",
+			"name": "8",
+			"url": "https://spoonacular.com/food-api/docs?fillIngredients=false&addRecipeNutrition=false&instructionsRequired=true&APIKey=12fa2f47c2374b3b938768168d07a5ca#Search-Recipes-Complex",
+			"time": 158,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				158
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "a6d730a2-8090-4f5a-be5e-4a284c58ed0d",
+			"name": "9",
+			"url": "https://spoonacular.com/food-api/docs?author=coffeebean&recipeBoxId=2468&APIKey=12fa2f47c2374b3b938768168d07a5ca#Search-Recipes-Complex?",
+			"time": 150,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				150
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "6419bdb4-f393-4847-82f3-eed907b192c4",
+			"name": "10",
+			"url": "https://spoonacular.com/food-api/docs?titleMatch=Crock%20Pot&maxReadyTime=20&ignorePantry=true&APIKey=12fa2f47c2374b3b938768168d07a5ca#Search-Recipes-Complex",
+			"time": 140,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				140
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "70dbae31-dd95-4461-b0a4-c1fa503db20f",
+			"name": "11",
+			"url": "https://spoonacular.com/food-api/docs?sort=calories&minCarbs=10&minProtein=10&APIKey=12fa2f47c2374b3b938768168d07a5ca#Search-Recipes-Complex",
+			"time": 151,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				151
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "a7ef5304-50b6-4f9c-a674-6d3f35cd3f69",
+			"name": "12",
+			"url": "https://spoonacular.com/food-api/docs?maxCarbs=100&maxProtein=100&minFat=1&APIKey=12fa2f47c2374b3b938768168d07a5ca#Search-Recipes-Complex",
+			"time": 178,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 500ms": true,
+				"Content-Type is present": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				178
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 500ms": true,
+					"Content-Type is present": true
+				}
+			]
+		},
+		{
+			"id": "ca0ae03d-1e55-45d2-ba68-e01aad680b26",
+			"name": "13",
+			"url": "https://spoonacular.com/food-api/docs?maxFat=100&maxAlcohol=100&APIKey=12fa2f47c2374b3b938768168d07a5ca#Search-Recipes-Complex?maxFat=100&maxAlcohol=100",
+			"time": 169,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 700ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 700ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				169
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 700ms": true
+				}
+			]
+		},
+		{
+			"id": "7e814379-46e4-4db6-911e-8b8d34ec5dfc",
+			"name": "14",
+			"url": "https://spoonacular.com/food-api/docs?minCaffeine=0&minCopper=0&excludeCuisine%09=greek&APIKey=12fa2f47c2374b3b938768168d07a5ca#Search-Recipes-Complex",
+			"time": 384,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 700ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 700ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				384
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 700ms": true
+				}
+			]
+		},
+		{
+			"id": "ea67633d-b50c-44e2-b326-b27c3ca8717d",
+			"name": "15",
+			"url": "https://spoonacular.com/food-api/docs?excludeIngredients=eggs&minSaturatedFat=0&minVitaminA=0&APIKey=12fa2f47c2374b3b938768168d07a5ca#Search-Recipes-Complex",
+			"time": 255,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 700ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 700ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				255
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 700ms": true
+				}
+			]
+		},
+		{
+			"id": "3390458a-a1e4-4efe-a9d8-cc88867f2b22",
+			"name": "16",
+			"url": "https://spoonacular.com/food-api/docs?maxVitaminC=100&maxVitaminD=100&author=coffeebean&APIKey=12fa2f47c2374b3b938768168d07a5ca#Search-Recipes-Complex",
+			"time": 191,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 700ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 700ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				191
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 700ms": true
+				}
+			]
+		},
+		{
+			"id": "3f35dcc7-8ff3-43ef-baa7-517f8869604e",
+			"name": "17",
+			"url": "https://spoonacular.com/food-api/docs?maxFluoride=100&maxVitaminD=100&recipeBoxId=2465&APIKey=12fa2f47c2374b3b938768168d07a5ca#Search-Recipes-Complex",
+			"time": 164,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 700ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 700ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				164
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 700ms": true
+				}
+			]
+		},
+		{
+			"id": "f29a6678-8b96-407d-b020-43115a1c8f07",
+			"name": "18",
+			"url": "https://spoonacular.com/food-api/docs?maxReadyTime=20&excludeIngredients=eggs&APIKey=12fa2f47c2374b3b938768168d07a5ca#Search-Recipes-Complex",
+			"time": 154,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 700ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 700ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				154
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 700ms": true
+				}
+			]
+		},
+		{
+			"id": "2779a373-b78a-402f-8628-74b7f7aad90b",
+			"name": "19",
+			"url": "https://spoonacular.com/food-api/docs?instructionsRequired=true&minCarbs=10&APIKey=12fa2f47c2374b3b938768168d07a5ca#Search-Recipes-Complex",
+			"time": 149,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 700ms": true,
+				"Content-Type is present": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 700ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				149
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 700ms": true,
+					"Content-Type is present": true
+				}
+			]
+		},
+		{
+			"id": "88df51fe-4423-42c4-874b-fe5c70d0ed04",
+			"name": "20",
+			"url": "https://spoonacular.com/food-api/docs?sortDirection=asc&addRecipeInformation%09=false&APIKey=12fa2f47c2374b3b938768168d07a5ca#Search-Recipes-Complex",
+			"time": 154,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 700ms": true,
+				"Content-Type is present": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 700ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				154
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 700ms": true,
+					"Content-Type is present": true
+				}
+			]
+		},
+		{
+			"id": "7ff48c38-eda0-4f3d-9971-f5c460a02f41",
+			"name": "1",
+			"url": "https://spoonacular.com/food-api/docs?language=en&APIKey=12fa2f47c2374b3b938768168d07a5ca#Classify-Cuisine?language=%09en",
+			"time": 329,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				329
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": false
+				}
+			]
+		},
+		{
+			"id": "e292523d-4126-41d1-b10c-1e805db6f305",
+			"name": "2",
+			"url": "https://spoonacular.com/food-api/docs?language=en&APIKey=12fa2f47c2374b3b938768168d07a5ca#Classify-Cuisine?language=%09en",
+			"time": 144,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 500ms": true,
+				"Content-Type is present": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				144
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 500ms": true,
+					"Content-Type is present": true
+				}
+			]
+		},
+		{
+			"id": "250dcb99-2d10-4d33-aa55-dd4030cd1188",
+			"name": "3",
+			"url": "https://spoonacular.com/food-api/docs?language=en&APIKey=12fa2f47c2374b3b938768168d07a5ca#Classify-Cuisine?language=%09en",
+			"time": 137,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 500ms": true,
+				"Content-Type is present": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				137
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 500ms": true,
+					"Content-Type is present": true
+				}
+			]
+		},
+		{
+			"id": "017fe58e-18d5-4ee9-90aa-a315c7442cbd",
+			"name": "4",
+			"url": "https://spoonacular.com/food-api/docs?language=en&APIKey=12fa2f47c2374b3b938768168d07a5ca#Classify-Cuisine?language=%09en",
+			"time": 146,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": true,
+				"Content-Type is present": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				146
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true,
+					"Content-Type is present": true
+				}
+			]
+		},
+		{
+			"id": "5ad5b157-8caf-4b43-ac40-41a3d4888306",
+			"name": "5",
+			"url": "https://spoonacular.com/food-api/docs?language=en&APIKey=12fa2f47c2374b3b938768168d07a5ca#Classify-Cuisine?language=%09en",
+			"time": 140,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 500ms": true,
+				"Content-Type is present": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				140
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 500ms": true,
+					"Content-Type is present": true
+				}
+			]
+		},
+		{
+			"id": "874b55aa-9090-4e55-beb2-6f09d120891e",
+			"name": "6",
+			"url": "https://spoonacular.com/food-api/docs?language=en&APIKey=12fa2f47c2374b3b938768168d07a5ca#Classify-Cuisine?language=%09en",
+			"time": 163,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 500ms": true,
+				"Content-Type is present": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				163
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 500ms": true,
+					"Content-Type is present": true
+				}
+			]
+		},
+		{
+			"id": "311ba292-13e9-425b-98cf-2216c7128ae5",
+			"name": "7",
+			"url": "https://spoonacular.com/food-api/docs?language=en&APIKey=12fa2f47c2374b3b938768168d07a5ca#Classify-Cuisine?language=%09en",
+			"time": 163,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 500ms": true,
+				"Content-Type is present": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				163
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 500ms": true,
+					"Content-Type is present": true
+				}
+			]
+		},
+		{
+			"id": "911b07f7-d7c2-4340-ab15-99c37ef07d74",
+			"name": "8",
+			"url": "https://spoonacular.com/food-api/docs?language=en&APIKey=12fa2f47c2374b3b938768168d07a5ca#Classify-Cuisine?language=%09en",
+			"time": 179,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 500ms": true,
+				"Content-Type is present": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				179
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 500ms": true,
+					"Content-Type is present": true
+				}
+			]
+		},
+		{
+			"id": "932971d8-cd3a-4431-91e7-afd43e2af033",
+			"name": "9",
+			"url": "https://spoonacular.com/food-api/docs?language=en&APIKey=12fa2f47c2374b3b938768168d07a5ca#Classify-Cuisine?language=%09en",
+			"time": 173,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 500ms": true,
+				"Content-Type is present": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				173
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 500ms": true,
+					"Content-Type is present": true
+				}
+			]
+		},
+		{
+			"id": "67599832-1561-4d41-ad40-c76bf7357fa2",
+			"name": "10",
+			"url": "https://spoonacular.com/food-api/docs?language=en&APIKey=12fa2f47c2374b3b938768168d07a5ca#Classify-Cuisine?language=%09en",
+			"time": 160,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": true,
+				"Content-Type is present": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				160
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true,
+					"Content-Type is present": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 5311,
+	"collection": {
+		"requests": [
+			{
+				"id": "0bd2928f-ed5d-47d0-9f40-c575174d0e8e",
+				"method": "GET"
+			},
+			{
+				"id": "e1ccacd9-9e81-4ea2-9942-6f43f0029dd0",
+				"method": "GET"
+			},
+			{
+				"id": "1ac3ed95-ea73-4784-a4c2-47077d5d9518",
+				"method": "GET"
+			},
+			{
+				"id": "03d2546b-d080-44e8-a9d9-4ed410ee7dfa",
+				"method": "GET"
+			},
+			{
+				"id": "1811c338-26cc-42d7-8b53-6022a418f45d",
+				"method": "GET"
+			},
+			{
+				"id": "3f256023-e6dc-4a15-9275-bbd0ef7c42c4",
+				"method": "GET"
+			},
+			{
+				"id": "9905d71d-6def-47fa-a704-86d1b64fc769",
+				"method": "GET"
+			},
+			{
+				"id": "2ed70875-6769-4134-acb1-80b7a9dde766",
+				"method": "GET"
+			},
+			{
+				"id": "a6d730a2-8090-4f5a-be5e-4a284c58ed0d",
+				"method": "GET"
+			},
+			{
+				"id": "6419bdb4-f393-4847-82f3-eed907b192c4",
+				"method": "GET"
+			},
+			{
+				"id": "70dbae31-dd95-4461-b0a4-c1fa503db20f",
+				"method": "GET"
+			},
+			{
+				"id": "a7ef5304-50b6-4f9c-a674-6d3f35cd3f69",
+				"method": "GET"
+			},
+			{
+				"id": "ca0ae03d-1e55-45d2-ba68-e01aad680b26",
+				"method": "GET"
+			},
+			{
+				"id": "7e814379-46e4-4db6-911e-8b8d34ec5dfc",
+				"method": "GET"
+			},
+			{
+				"id": "ea67633d-b50c-44e2-b326-b27c3ca8717d",
+				"method": "GET"
+			},
+			{
+				"id": "3390458a-a1e4-4efe-a9d8-cc88867f2b22",
+				"method": "GET"
+			},
+			{
+				"id": "3f35dcc7-8ff3-43ef-baa7-517f8869604e",
+				"method": "GET"
+			},
+			{
+				"id": "f29a6678-8b96-407d-b020-43115a1c8f07",
+				"method": "GET"
+			},
+			{
+				"id": "2779a373-b78a-402f-8628-74b7f7aad90b",
+				"method": "GET"
+			},
+			{
+				"id": "88df51fe-4423-42c4-874b-fe5c70d0ed04",
+				"method": "GET"
+			},
+			{
+				"id": "7ff48c38-eda0-4f3d-9971-f5c460a02f41",
+				"method": "POST"
+			},
+			{
+				"id": "e292523d-4126-41d1-b10c-1e805db6f305",
+				"method": "POST"
+			},
+			{
+				"id": "250dcb99-2d10-4d33-aa55-dd4030cd1188",
+				"method": "POST"
+			},
+			{
+				"id": "017fe58e-18d5-4ee9-90aa-a315c7442cbd",
+				"method": "POST"
+			},
+			{
+				"id": "5ad5b157-8caf-4b43-ac40-41a3d4888306",
+				"method": "POST"
+			},
+			{
+				"id": "874b55aa-9090-4e55-beb2-6f09d120891e",
+				"method": "POST"
+			},
+			{
+				"id": "311ba292-13e9-425b-98cf-2216c7128ae5",
+				"method": "POST"
+			},
+			{
+				"id": "911b07f7-d7c2-4340-ab15-99c37ef07d74",
+				"method": "POST"
+			},
+			{
+				"id": "932971d8-cd3a-4431-91e7-afd43e2af033",
+				"method": "POST"
+			},
+			{
+				"id": "67599832-1561-4d41-ad40-c76bf7357fa2",
+				"method": "POST"
+			}
+		]
+	}
+}
